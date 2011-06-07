@@ -28,7 +28,7 @@ func Now() int64 {
 // It prints the the name of the function and the time elapsed between
 // two times:  The time passed as the argument, and the current time.
 func From(t0 int64) {
-	dt := float(Now() - t0)
+	dt := float64(Now() - t0)
 	pc, _, _, ok := runtime.Caller(1)
 	if ok {
 		fmt.Printf("%s ",runtime.FuncForPC(pc).Name())
